@@ -1,0 +1,189 @@
+.main {
+  background: linear-gradient(180deg, #0e0e0e 0%, rgba(27, 27, 27, 0) 100%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.main section {
+  background-color: transparent;
+}
+
+nav,
+.hero,
+.begin,
+.list--item {
+  display: flex;
+  color: #fff;
+}
+
+nav {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+nav a,
+nav a:visited {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.active {
+  color: #fff;
+}
+
+.main,
+.hero,
+.begin {
+  flex-direction: column;
+}
+
+.main h1 {
+  font-weight: bold;
+  font-size: 54px;
+  margin: 0;
+  text-align: center;
+}
+
+.main h1,
+.main p {
+  text-align: center;
+}
+
+label,
+p,
+.list--item h4 {
+  font-size: 20px;
+}
+
+p {
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.618;
+  width: 70%;
+}
+
+.hero,
+.begin {
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  color: #ffdd99;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  color: #fff;
+  padding: 0;
+}
+
+.list--item {
+  background-color: #fff;
+  justify-content: space-evenly;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+}
+
+.process {
+  position: relative;
+}
+
+.list--item {
+  padding: 1rem;
+}
+.list--item:nth-of-type(2n) {
+  position: relative;
+  top: -2rem;
+}
+
+.begin {
+  height: 600px;
+  position: relative;
+}
+.begin input {
+  display: none;
+}
+.begin h1 {
+  font-size: 84px;
+  opacity: 0.3;
+}
+.begin div {
+  margin: 1rem 0;
+}
+.begin svg {
+  position: absolute;
+  z-index: -2;
+  left: 20%;
+}
+.begin label:first-of-type {
+  height: 15px;
+  width: 15px;
+  padding: 0.2rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+.begin label:first-of-type:hover {
+  background-color: red;
+}
+.begin label:first-of-type + input:checked {
+  background-color: orange;
+  border: 1px solid red;
+}
+
+.list__item--container {
+  margin: 7rem 0 0 0;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .main h1 {
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+  }
+
+  label,
+p {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .list__item--container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .list--item {
+    margin: 1rem 0;
+    height: 400px;
+    width: 100%;
+  }
+  .list--item:nth-of-type(2n) {
+    position: relative;
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=/styles.76d4e0c1.css.map */

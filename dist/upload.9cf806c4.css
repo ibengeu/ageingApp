@@ -1,0 +1,11 @@
+.upload__image--container p{
+    text-align: left;
+}
+.upload__image--container label{
+    border: 1px dashed #fff;
+    min-height: 400px;
+    text-align: left;
+    display: block;
+}
+
+/*# sourceMappingURL=/upload.9cf806c4.css.map */

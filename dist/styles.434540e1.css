@@ -1,0 +1,164 @@
+nav,
+.hero,
+.begin,
+.list--item {
+  display: flex;
+  color: #fff;
+}
+
+nav a,
+nav a:visited {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.active {
+  color: #fff;
+}
+
+.main,
+.hero,
+.begin {
+  flex-direction: column;
+}
+
+.main h1,
+.main p {
+  text-align: center;
+}
+
+label,
+p,
+.list--item h4 {
+  font-size: 20px;
+}
+
+p {
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.618;
+  width: 70%;
+}
+
+.hero,
+.begin {
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  color: #ffdd99;
+}
+.hero svg {
+  position: absolute;
+}
+
+.list--item {
+  background-color: #fff;
+  justify-content: space-evenly;
+  color: #0e0c0c;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+}
+.hero p {
+  width: 50%;
+}
+
+.process {
+  position: relative;
+}
+
+.list--item {
+  padding: 1rem;
+}
+.list--item:nth-of-type(2n) {
+  position: relative;
+  top: -2rem;
+}
+
+.begin {
+  height: 600px;
+  position: relative;
+}
+.begin input {
+  display: none;
+}
+.begin h1 {
+  font-size: 84px;
+  opacity: 0.3;
+}
+.begin div {
+  margin: 1rem 0;
+}
+.begin label:first-of-type {
+  height: 15px;
+  width: 15px;
+  padding: 0.2rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+.begin label:first-of-type:hover {
+  background-color: red;
+}
+.begin label:first-of-type + input:checked {
+  background-color: orange;
+  border: 1px solid red;
+}
+
+.list__item--container {
+  display: flex;
+  list-style: none;
+  color: #fff;
+  padding: 0;
+  margin: 7rem 0 0 0;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .main h1 {
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+  }
+
+  label,
+p {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .list__item--container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .list--item {
+    margin: 1rem 0;
+    height: 400px;
+    width: 100%;
+  }
+  .list--item:nth-of-type(2n) {
+    position: relative;
+    top: 0;
+  }
+}
+
+/*# sourceMappingURL=/styles.434540e1.css.map */
