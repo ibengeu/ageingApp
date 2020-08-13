@@ -21,8 +21,8 @@
             <a href="./index.html"><img src="" alt="CV-Ageeing"></a>
 
             <ul>
-                <li>Play</li>
-                <li>How it works</li>
+                <!-- <li>Play</li>
+                <li>How it works</li> -->
                 <li>Privacy Policy</li>
             </ul>
         </nav>
@@ -41,9 +41,9 @@
                 <span id="range-value" class="range-value">21</span>
 
             </div>
-<a href="/results.html">Click</a>
+            <!-- <a href="/results.html">Click</a> -->
             <button type="button" id="age-image"> Age image</button>
-            
+
         </section>
 
         <footer>
@@ -65,26 +65,26 @@
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
-                    // console.log(e)
                     document.getElementById("selected-image").innerHTML = ""
-
                     const imgData = document.createElement("IMG");
-                    imgData.src = e.target.result
-                    imgData.alt = "uploaded image"
-                    const imgLabel = document.getElementById("selected-image").appendChild(imgData);
-                    // console.log(document.getElementsByTagName("img")[0].src === e);
+                    imgData.src = e.target.result;
+                    imgData.alt = "uploaded-image";
+                    imgData.className = "__image";
 
+                    console.log(imgData)
+
+                    const imgLabel = document.getElementById("selected-image").appendChild(imgData);
                 };
 
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        document.getElementById("age-image").addEventListener("click", () => {
-            console.log("clicked")
-        })
-        document.getElementById("age-image").removeEventListener("click", () => {
-            console.log("clicked")
-        })
+        // document.getElementById("age-image").addEventListener("click", () => {
+        //     console.log("clicked")
+        // })
+        // document.getElementById("age-image").removeEventListener("click", () => {
+        //     console.log("clicked")
+        // })
 
     </script>
 
