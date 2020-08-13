@@ -1,6 +1,8 @@
 nav,
 .hero,
 .begin,
+.main,
+.process,
 .list--item {
   display: flex;
   color: #fff;
@@ -19,7 +21,7 @@ nav a:visited {
 
 .main,
 .hero,
-.begin {
+.begin, .process {
   flex-direction: column;
 }
 
@@ -42,7 +44,7 @@ p {
 }
 
 .hero,
-.begin {
+.begin, .main {
   justify-content: center;
   align-items: center;
 }
@@ -75,6 +77,7 @@ p {
 
 .process {
   position: relative;
+  width: 90%;
 }
 
 .list--item {
