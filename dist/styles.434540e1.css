@@ -1,3 +1,4 @@
+@charset "UTF-8";
 nav,
 .hero,
 .begin,
@@ -97,7 +98,18 @@ p {
   position: relative;
 }
 .begin input {
-  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  border: 1px solid red;
+  height: 20px;
+  border-radius: 3px;
+}
+.begin input:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 20px;
 }
 .begin h1 {
   font-size: 84px;
@@ -105,21 +117,6 @@ p {
 }
 .begin div {
   margin: 1rem 0;
-}
-.begin label:first-of-type {
-  height: 15px;
-  width: 15px;
-  padding: 0.2rem;
-  border-radius: 3px;
-  border: 1px solid #fff;
-  display: inline-block;
-}
-.begin label:first-of-type:hover {
-  background-color: red;
-}
-.begin label:first-of-type + input:checked {
-  background-color: orange;
-  border: 1px solid red;
 }
 
 .list__item--container {
@@ -137,6 +134,7 @@ p {
   }
   .main svg {
     width: 200%;
+    -o-object-fit: contain;
     object-fit: contain;
   }
 

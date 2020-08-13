@@ -57,16 +57,10 @@ p {
   h1 {
     color: #ffdd99;
   }
-
-
 }
-
-
-
 
 .list--item {
   background-color: #fff;
-  // margin: 0 1rem;
   justify-content: space-evenly;
   color: rgb(14, 12, 12);
   text-align: center;
@@ -103,7 +97,20 @@ p {
   width: 100%;
   position: relative;
   input {
-    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 20px;
+    border: 1px solid red;
+    height: 20px;
+    border-radius: 3px;
+
+    &:checked::after {
+      content: "\2713";
+      color: white;
+      font-size: 20px;
+    }
   }
 
   h1 {
@@ -116,26 +123,6 @@ p {
 
   div {
     margin: 1rem 0;
-  }
-
-  label {
-    &:first-of-type {
-      height: 15px;
-      width: 15px;
-      padding: 0.2rem;
-      border-radius: 3px;
-      border: 1px solid #fff;
-      display: inline-block;
-
-      &:hover {
-        background-color: red;
-      }
-    }
-
-    &:first-of-type + input:checked {
-      background-color: orange;
-      border: 1px solid red;
-    }
   }
 }
 
@@ -152,18 +139,19 @@ p {
 @media screen and (max-width: 900px) {
   .main {
     padding: 1rem;
-    
-    svg{
+
+    svg {
       width: 200%;
+      -o-object-fit: contain;
       object-fit: contain;
     }
   }
 
-  .hero{
+  .hero {
     // width: 100%;
     justify-content: center;
     align-items: center;
-    p{
+    p {
       width: 100%;
     }
   }
