@@ -20912,8 +20912,6 @@
 
         </section>
         <section class="begin" id="begin">
-
-
             <h1>
                 Let's Do this!
             </h1>
@@ -20928,10 +20926,6 @@
                 Begin
                 <!-- </a> -->
             </button>
-
-            <a href="./upload.html">Click</a>
-
-
         </section>
 
         <footer>
@@ -20951,29 +20945,19 @@
         const checkForTermsAcceptance = () => {
             const hasAccepted = localStorage.getItem("accept");
             hasAccepted !== true && disableBtn();
-            disableLink();
             redirectUser()
-
         }
 
 
         const disableBtn = () => {
             const setDisableBtn = document.querySelector(".button").disabled = true;
-
-        }
-
-        const disableLink = ()=>{
-            const getLink = document.querySelector(".begin").children[3];
-            console.log("getLink",getLink)
-
         }
 
         const redirectUser = () => {
-            const setDisableBtn = document.querySelector(".button").addEventListener("click",
+            const handleBtnClick = document.querySelector(".button").addEventListener("click",
                 () => window.location.replace("/upload.html"));
 
         }
-
 
         const handleChange = (value) => {
             const checkedTerms = value.checked;
@@ -20981,6 +20965,7 @@
             console.log("checked", value.checked);
             document.querySelector(".button").disabled = !checkedTerms;
         }
+
     </script>
 
 

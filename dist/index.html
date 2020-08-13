@@ -7044,8 +7044,6 @@
 
         </section>
         <section class="begin" id="begin">
-
-
             <h1>
                 Let's Do this!
             </h1>
@@ -7060,10 +7058,6 @@
                 Begin
                 <!-- </a> -->
             </button>
-
-            <a href="/upload.html">Click</a>
-
-
         </section>
 
         <footer>
@@ -7080,7 +7074,6 @@
     <script>var checkForTermsAcceptance = function checkForTermsAcceptance() {
   var hasAccepted = localStorage.getItem("accept");
   hasAccepted !== true && disableBtn();
-  disableLink();
   redirectUser();
 };
 
@@ -7088,13 +7081,8 @@ var disableBtn = function disableBtn() {
   var setDisableBtn = document.querySelector(".button").disabled = true;
 };
 
-var disableLink = function disableLink() {
-  var getLink = document.querySelector(".begin").children[3];
-  console.log("getLink", getLink);
-};
-
 var redirectUser = function redirectUser() {
-  var setDisableBtn = document.querySelector(".button").addEventListener("click", function () {
+  var handleBtnClick = document.querySelector(".button").addEventListener("click", function () {
     return window.location.replace("/upload.html");
   });
 };

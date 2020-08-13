@@ -29,10 +29,10 @@
 }
 .upload__image--container button {
   width: 20%;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   border: none;
   border-radius: 5px;
-  background-color: orange;
+  background-color: #FFC145;
 }
 
 .slider__input {
@@ -130,6 +130,12 @@
 }
 .slider__input input[type=range]:focus::-ms-fill-upper {
   background: #ffffff;
+}
+
+.__image {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 992px) {
