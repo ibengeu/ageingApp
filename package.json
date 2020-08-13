@@ -4,13 +4,15 @@
   "description": "Computer vision research project for iQubeLabs",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "test": "test"
   },
   "author": "Uforo Ibenge",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "jest": "^26.4.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
   }
