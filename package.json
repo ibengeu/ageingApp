@@ -4,8 +4,7 @@
   "description": "Computer vision research project for iQubeLabs",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html",
-    "test": "test"
+    "build": "parcel build index.html"
   },
   "author": "Uforo Ibenge",
   "license": "ISC",

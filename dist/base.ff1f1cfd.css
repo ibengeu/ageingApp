@@ -50,6 +50,7 @@ nav {
   margin-top: 1rem;
   padding: 1rem 5rem;
   width: 100%;
+  z-index: 2;
 }
 nav ul {
   display: flex;

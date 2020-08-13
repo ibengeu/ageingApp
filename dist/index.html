@@ -7061,6 +7061,9 @@
                 <!-- </a> -->
             </button>
 
+            <a href="/upload.html">Click</a>
+
+
         </section>
 
         <footer>
@@ -7076,18 +7079,32 @@
 
     <script>var checkForTermsAcceptance = function checkForTermsAcceptance() {
   var hasAccepted = localStorage.getItem("accept");
-  console.log("hasAccepted", hasAccepted); // const checkedTerms = value.checked;
-  // const disableBtn = document.querySelector(".button").disabled =true;
-  // console.log("disableBtn",disableBtn)
-  // !hasAccepted && disableBtn
+  hasAccepted !== true && disableBtn();
+  disableLink();
+  redirectUser();
 };
 
-function handleChange(value) {
+var disableBtn = function disableBtn() {
+  var setDisableBtn = document.querySelector(".button").disabled = true;
+};
+
+var disableLink = function disableLink() {
+  var getLink = document.querySelector(".begin").children[3];
+  console.log("getLink", getLink);
+};
+
+var redirectUser = function redirectUser() {
+  var setDisableBtn = document.querySelector(".button").addEventListener("click", function () {
+    return window.location.replace("/upload.html");
+  });
+};
+
+var handleChange = function handleChange(value) {
   var checkedTerms = value.checked;
   localStorage.setItem("accept", checkedTerms);
   console.log("checked", value.checked);
   document.querySelector(".button").disabled = !checkedTerms;
-}</script>
+};</script>
 
 
 

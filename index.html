@@ -20929,6 +20929,9 @@
                 <!-- </a> -->
             </button>
 
+            <a href="./upload.html">Click</a>
+
+
         </section>
 
         <footer>
@@ -20947,20 +20950,32 @@
 
         const checkForTermsAcceptance = () => {
             const hasAccepted = localStorage.getItem("accept");
-            console.log("hasAccepted", hasAccepted)
-            // const checkedTerms = value.checked;
-
-            // const disableBtn = document.querySelector(".button").disabled =true;
-            // console.log("disableBtn",disableBtn)
-
-
-            // !hasAccepted && disableBtn
-
+            hasAccepted !== true && disableBtn();
+            disableLink();
+            redirectUser()
 
         }
 
 
-        function handleChange(value) {
+        const disableBtn = () => {
+            const setDisableBtn = document.querySelector(".button").disabled = true;
+
+        }
+
+        const disableLink = ()=>{
+            const getLink = document.querySelector(".begin").children[3];
+            console.log("getLink",getLink)
+
+        }
+
+        const redirectUser = () => {
+            const setDisableBtn = document.querySelector(".button").addEventListener("click",
+                () => window.location.replace("/upload.html"));
+
+        }
+
+
+        const handleChange = (value) => {
             const checkedTerms = value.checked;
             localStorage.setItem("accept", checkedTerms)
             console.log("checked", value.checked);
