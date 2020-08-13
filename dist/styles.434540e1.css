@@ -21,7 +21,8 @@ nav a:visited {
 
 .main,
 .hero,
-.begin, .process {
+.begin,
+.process {
   flex-direction: column;
 }
 
@@ -44,16 +45,18 @@ p {
 }
 
 .hero,
-.begin, .main {
+.begin,
+.main {
   justify-content: center;
   align-items: center;
 }
 
+.hero {
+  position: relative;
+  z-index: 4;
+}
 .hero h1 {
   color: #ffdd99;
-}
-.hero svg {
-  position: absolute;
 }
 
 .list--item {
@@ -89,7 +92,8 @@ p {
 }
 
 .begin {
-  height: 600px;
+  height: 800px;
+  width: 100%;
   position: relative;
 }
 .begin input {
@@ -130,6 +134,18 @@ p {
 @media screen and (max-width: 900px) {
   .main {
     padding: 1rem;
+  }
+  .main svg {
+    width: 200%;
+    object-fit: contain;
+  }
+
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+  .hero p {
+    width: 100%;
   }
 
   .main h1 {
