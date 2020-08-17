@@ -2,10 +2,13 @@
   "name": "ageingapp",
   "version": "1.0.0",
   "description": "Computer vision research project for iQubeLabs",
+  "engines": {
+    "node": "10.x"
+  },
 
   "scripts": {
     "dev": "parcel src/index.html",
-    "start": "./node_modules/parcel-bundler/bin/cli.js src/index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html",
     "heroku-postbuild": "parcel build src/index.html"
   },
