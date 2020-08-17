@@ -2,9 +2,15 @@
   "name": "ageingapp",
   "version": "1.0.0",
   "description": "Computer vision research project for iQubeLabs",
+  "engines": {
+    "npm": "6.0.0",
+    "node": "10.9.0"
+  },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel src/index.html",
+    "start": "./node_modules/parcel-bundler/bin/cli.js src/index.html",
+    "build": "parcel build index.html",
+    "heroku-postbuild": "parcel build src/index.html"
   },
   "author": "Uforo Ibenge",
   "license": "ISC",
