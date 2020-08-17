@@ -2,10 +2,7 @@
   "name": "ageingapp",
   "version": "1.0.0",
   "description": "Computer vision research project for iQubeLabs",
-  "engines": {
-    "npm": "6.0.0",
-    "node": "10.9.0"
-  },
+
   "scripts": {
     "dev": "parcel src/index.html",
     "start": "./node_modules/parcel-bundler/bin/cli.js src/index.html",
