@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;531;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;531;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <!-- <script src="index.js"></script> -->
     <link rel="stylesheet" href="styles/normalize.scss">
     <link rel="stylesheet" href="styles/base.scss">
     <link rel="stylesheet" href="styles/index.scss">
@@ -20946,53 +20946,44 @@
 
     <script>
 
-
+        console.log("index")
 
         const checkForTermsAcceptance = () => {
+            console.log("called", checkForTermsAcceptance);
             const hasAccepted = localStorage.getItem("accept");
             hasAccepted !== true && disableBtn();
             redirectUser();
             hasElementSection();
-
-
-            // function isScrolledIntoView(elem) {
-            //     var docViewTop = $(window).scrollTop();
-            //     var docViewBottom = docViewTop + $(window).height();
-
-            //     var elemTop = $(elem).offset().top;
-            //     var elemBottom = elemTop + $(elem).height();
-
-            //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-            // }
-
 
         }
 
 
         const hasElementSection = () => {
 
-            const hasProcessClass = document.querySelector(".process").addEventListener("scroll",()=>document.querySelector(".process").getBoundingClientRect());
+            const hasProcessClass = document.querySelector(".process").addEventListener("scroll", () => document.querySelector(".process").getBoundingClientRect());
             console.log("hasProcessClass", hasProcessClass)
 
         }
 
 
         const disableBtn = () => {
-            const setDisableBtn = document.querySelector(".button").disabled = true;
+            const setDisableBtn = document.querySelector("button").disabled = true;
         }
 
         const redirectUser = () => {
-            const handleBtnClick = document.querySelector(".button").addEventListener("click",
-                () => window.location.replace("/upload.html"));
+            document.querySelector("button").addEventListener("click",
+                () => window.location.href = "/upload.html");
 
         }
+
 
         const handleChange = (value) => {
             const checkedTerms = value.checked;
             localStorage.setItem("accept", checkedTerms)
-            console.log("checked", value.checked);
-            document.querySelector(".button").disabled = !checkedTerms;
+            document.querySelector("button").disabled = !checkedTerms;
+              const btnVar = document.querySelector("button").disabled;
         }
+
 
     </script>
 

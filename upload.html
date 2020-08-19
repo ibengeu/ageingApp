@@ -42,7 +42,7 @@
 
             </div>
             <!-- <a href="/results.html">Click</a> -->
-            <button type="button" id="age-image"> Age image</button>
+            <button type="button" id="age-image" class="upload__image"> Age image</button>
 
         </section>
 
@@ -56,12 +56,20 @@
 
 
     <script>
+
+
         document.getElementById("copyright").innerHTML = new Date().getFullYear();
-        console.log(document.getElementsByTagName("img")[0].src)
+        console.log("img src", document.getElementsByTagName("img")[0].src)
 
         const changedValue = value => document.getElementById("range-value").innerHTML = value;
+
+        let image = null;
         const getUrl = (input) => {
+
+
             if (input.files && input.files[0]) {
+
+                const clickBtn = document.querySelector(".upload__image").addEventListener("click", ()=> ageImage({ age: 21, file: input.files }));
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
@@ -71,7 +79,6 @@
                     imgData.alt = "uploaded-image";
                     imgData.className = "__image";
 
-                    console.log(imgData)
 
                     const imgLabel = document.getElementById("selected-image").appendChild(imgData);
                 };
@@ -79,12 +86,29 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        // document.getElementById("age-image").addEventListener("click", () => {
-        //     console.log("clicked")
-        // })
-        // document.getElementById("age-image").removeEventListener("click", () => {
-        //     console.log("clicked")
-        // })
+
+
+
+        const ageImage =  (data) => {
+            console.log("data", data)
+            const { age,file } = data;
+
+            const formdata = new FormData()
+
+            formdata.append("age", "21");
+            formdata.append("file", file[0]);
+
+            var requestOptions = {
+                method: 'POST',
+                body: formdata,
+                redirect: 'follow'
+            };
+
+            fetch(`https://agingapi.iqubesolutions.com.ng/predict/`, requestOptions)
+                .then(response => response.json())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
+        }
 
     </script>
 
