@@ -15,7 +15,7 @@
     <title>Home</title>
 </head>
 
-<body onload="checkForTermsAcceptance();">
+<body>
 
     <div class="main">
 
@@ -20944,34 +20944,24 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 
+    <!-- <script src="js/index.js"></script> -->
     <script>
 
-
+        console.log("index")
 
         const checkForTermsAcceptance = () => {
+            console.log("called", checkForTermsAcceptance)
             const hasAccepted = localStorage.getItem("accept");
             hasAccepted !== true && disableBtn();
             redirectUser();
             hasElementSection();
-
-
-            // function isScrolledIntoView(elem) {
-            //     var docViewTop = $(window).scrollTop();
-            //     var docViewBottom = docViewTop + $(window).height();
-
-            //     var elemTop = $(elem).offset().top;
-            //     var elemBottom = elemTop + $(elem).height();
-
-            //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-            // }
-
 
         }
 
 
         const hasElementSection = () => {
 
-            const hasProcessClass = document.querySelector(".process").addEventListener("scroll",()=>document.querySelector(".process").getBoundingClientRect());
+            const hasProcessClass = document.querySelector(".process").addEventListener("scroll", () => document.querySelector(".process").getBoundingClientRect());
             console.log("hasProcessClass", hasProcessClass)
 
         }
@@ -20987,12 +20977,14 @@
 
         }
 
+
         const handleChange = (value) => {
             const checkedTerms = value.checked;
             localStorage.setItem("accept", checkedTerms)
             console.log("checked", value.checked);
             document.querySelector(".button").disabled = !checkedTerms;
         }
+
 
     </script>
 
